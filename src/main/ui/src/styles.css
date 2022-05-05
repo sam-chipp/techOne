@@ -1,0 +1,34 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #22405e;
+  height: 100vh;
+  width: 100vw;
+  background-size: 100%;
+}
+
+
+.container {
+  padding: 1.5em;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.card-header {
+  background-color: #182330a9 !important;
+  color: #f6f8fa
+}
+
+.inputCard {
+  padding: 10px;
+}
+
+.error-message {
+  margin-top: 1em;
+  color: red;
+}
