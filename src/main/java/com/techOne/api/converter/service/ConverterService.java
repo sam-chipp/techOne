@@ -48,7 +48,7 @@ public class ConverterService
             for (Map.Entry<String, Integer> entry: powers.entrySet())
             {
                 /* The 3 digit value corresponding to the related power. */
-                final long threeDidgitSection = (left / entry.getValue() % 1000);
+                final int threeDidgitSection = (left / entry.getValue() % 1000);
 
                 res.append(convertForValue(threeDidgitSection, "", entry.getKey()));
             }
@@ -76,7 +76,7 @@ public class ConverterService
         if (right > 0)
         {
             final String centSuffix = right == 1 ? "CENT" : "CENTS";
-            res.append(convertForValue((long) right, " AND ", centSuffix));
+            res.append(convertForValue((int) right, " AND ", centSuffix));
         }
 
         return res.toString();
@@ -89,7 +89,7 @@ public class ConverterService
      * @param suffix The suffix to be appended after the values.
      * @return The word values for the given number eg. ONE HUNDRED EIGHTY-THREE BILLION
      */
-    private String convertForValue(final long n, final String prefix, final String suffix)
+    private String convertForValue(final int n, final String prefix, final String suffix)
     {
         if (n == 0)
         {
@@ -106,7 +106,7 @@ public class ConverterService
             val.append(" HUNDRED ");
         }
 
-        final int remainder = (int) n % 100;
+        final int remainder = n % 100;
 
         if (remainder > 19)
         {
