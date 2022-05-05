@@ -73,7 +73,7 @@ The application is designed to take a number input from the web based front end.
    ```
 2. Navigate to converter directory and run maven install
   ```sh
-   cd converter
+   cd techOne
    mvn clean install
    java -jar target/converter-0.0.1-SNAPSHOT.jar
    ```
